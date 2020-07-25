@@ -35,7 +35,7 @@ class ChildActivity : AppCompatActivity() {
                 val event = CustomMessageEvent()
                 event.setCustomMessage(userText)
 
-                // send this event to subscribers
+                // send this event to subscribers (publisher)
                 EventBus.getDefault().post(event)
 
                 finish()

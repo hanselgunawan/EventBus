@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Set this activity as a subscriber
         EventBus.getDefault().register(this)
 
         resultEditText = resultEditTextMain
@@ -31,6 +32,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        EventBus.getDefault().unregister(this)
     }
 
     // it will run on Main Thread
