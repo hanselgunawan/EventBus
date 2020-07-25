@@ -17,5 +17,33 @@ It will be hard to handle if we have a one-to-many relationship between parent a
 ## Implementation
 `implementation 'org.greenrobot:eventbus:3.0.0'`
 
-## Communicating Between Parent & Child Activity 
+## Steps To Implement EventBus
+### Define An Event
+In the form of Plain Old Java Object (POJO) or Plain Old Kotlin Object (POKO).
+For example:
+```
+class CustomMessageEvent {
+
+    private lateinit var customMessage: String
+
+        fun getCustomMessage(): String {
+            return customMessage
+        }
+        fun setCustomMessage(customMessage: String) {
+            this.customMessage = customMessage
+        }
+
+}
+```
+
+### Register The Subscriber
+`EventBus.getDefault().register(this)`
+
+### Create A Publisher
+`EventBus.getDefault().post(event)`
+
+### Unregister The Subscriber
+`EventBus.getDefault().unregister(this)`
+
+## Communication Between Parent & Child Activity 
 [DEMO](https://imgur.com/xl5ci05)
