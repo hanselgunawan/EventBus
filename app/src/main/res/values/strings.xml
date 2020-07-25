@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EventBusDemo</string>
+    <string name="title_activity_child">ChildActivity</string>
+    <string name="trigger_event">Trigger Event</string>
+    <string name="result_will_appear_here">Result Will Appear Here</string>
+    <string name="launch_child">Launch Child</string>
 </resources>
