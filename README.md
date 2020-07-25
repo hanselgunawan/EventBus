@@ -9,6 +9,7 @@ Publish and Subcribe pattern is a messaging pattern in which subscribers registe
 
 ## The Benefit
 EventBus can decoupled class extensions. Imagine a case like this:
+
 <img src="https://i.imgur.com/hVoRfnL.png" width="500px" height="500px" />
 
 It will be hard to handle if we have a one-to-many relationship between parent and child activities or fragments.
