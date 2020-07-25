@@ -36,13 +36,13 @@ class CustomMessageEvent {
 }
 ```
 
-### Register The Subscriber
+### Subscribe To EventBus
 `EventBus.getDefault().register(this)`
 
 ### Create A Publisher
 `EventBus.getDefault().post(event)`
 
-### Unregister The Subscriber
+### Unsubscribe From EventBus
 `EventBus.getDefault().unregister(this)`
 
 ## Communication Between Parent & Child Activity 
